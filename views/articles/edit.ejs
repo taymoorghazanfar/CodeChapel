@@ -1,0 +1,45 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="well" id="register-card">
+    <!--    top pane-->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Edit Article</h1>
+            <img id="logo-image" src="/images/logo_main.png" alt="" width="20%" height="20%">
+        </div>
+    </div>
+
+    <!--    form content-->
+    <form action="/articles/<%= article["_id"] %>?_method=PUT" method="post">
+        <div class="form-group">
+            <label>Title: </label>
+            <input class="form-control" type="text" name="article[title]" placeholder="Enter article title"
+                   value="<%= article["title"] %>"><br>
+        </div>
+        <div class="form-group">
+            <label>Featured image: </label>
+            <input class="form-control" type="url" name="article[image]" placeholder="Enter image url"
+                   value="<%= article["image"] %>"><br>
+        </div>
+        <div class="form-group">
+            <label>Short description: </label>
+            <input class="form-control" type="text" name="article[shortDescription]"
+                   value="<%= article["shortDescription"] %>"
+                   placeholder="Enter a short description"><br>
+        </div>
+        <div class="form-group">
+            <label>Full description: </label>
+            <textarea style="resize: vertical; min-height: 300px" class="form-control" name="article[description]"
+                      placeholder="Enter full description. (You can use HTML elements to stylize you article.)">
+                <%= article["description"] %>
+            </textarea>
+        </div>
+        <div class="form-group">
+            <button style="width: 30%; margin: auto" class="btn btn-lg btn-block btn-primary" type="submit">Update
+            </button>
+        </div>
+    </form>
+    <a href="/articles/<%= article["_id"] %>">Go back</a>
+</div>
+
+<%- include("../partials/footer.ejs") %>

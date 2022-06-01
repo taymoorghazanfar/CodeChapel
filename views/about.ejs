@@ -1,0 +1,84 @@
+<%- include("./partials/header.ejs") %>
+
+<div class="well" id="request-card">
+    <!--    top pane-->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>About us</h1>
+            <img id="logo-image" src="/images/logo_main.png" alt="" width="20%" height="20%">
+        </div>
+    </div>
+
+    <!--    about us cards-->
+    <div class="well" style="text-align: center;">
+        <div class="row">
+            <div class="col-md-8">
+                <!--                student 1-->
+                <div class="col-md-4"
+                     style="background-color: black; color: white; text-align: center; border-radius: 10px; margin-right: 20px">
+                    <img src="/images/member_1.jpg" style="width: 100%; border-radius: 10px; margin-top: 15px"><br><br>
+
+                    <i class="glyphicon glyphicon-user"></i><br>
+                    <span>Taymoor Ghazanfar</span><br><br>
+
+                    <i class="glyphicon glyphicon-asterisk"></i><br>
+                    <span>3625/BSSE/F17-C</span><br><br>
+
+                    <i class="glyphicon glyphicon-envelope"></i><br>
+                    <span>taymoor.bsse3625@iiu.edu.pk</span><br><br>
+                </div>
+                <!--                student 2-->
+                <div class="col-md-4"
+                     style="background-color: black; color: white; text-align: center; border-radius: 10px">
+                    <img src="/images/member_2.jpg" style="width: 100%; border-radius: 10px; margin-top: 15px"><br><br>
+
+                    <i class="glyphicon glyphicon-user"></i><br>
+                    <span>Abdul Basit</span><br><br>
+
+                    <i class="glyphicon glyphicon-asterisk"></i><br>
+                    <span>3627/BSSE/F17-C</span><br><br>
+
+                    <i class="glyphicon glyphicon-envelope"></i><br>
+                    <span>abdul.bsse3627@iiu.edu.pk</span><br><br>
+                </div>
+                <!--                about us content-->
+                <div class="col-md-8"
+                     style="border: 1px solid black; margin-left: 10px; margin-top: 20px; text-align: left; padding: 20px">
+                    <strong>Code Chapel</strong><br>
+                    <em>A programming friendly portal</em><br><br>
+                    was established with a vision to create a programming portal
+                    where every programmer could not only find solution for their problems
+                    but also provide solutions to other programmers and to create a rich and
+                    friendly community for developers of any programming language.
+                </div>
+            </div>
+            <!--            contact us form-->
+            <div class="col-md-4">
+                <div class="lead" style="background-color: black; color: white; padding: 10px; border-radius: 10px">
+                    Contact us
+                </div>
+
+                <form action="/feedback" method="post">
+                    <div class="form-group">
+                        <label>Name: </label>
+                        <input class="form-control" type="text" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email: </label>
+                        <input class="form-control" type="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message: </label>
+                        <textarea style="resize: vertical; min-height: 200px" class="form-control" name="message"
+                                  placeholder="Enter your message / suggestion"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("./partials/footer.ejs") %>

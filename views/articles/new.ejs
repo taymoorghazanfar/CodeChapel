@@ -1,0 +1,48 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="well" id="register-card">
+    <!--    top pane-->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>New Article</h1>
+            <img id="logo-image" src="/images/logo_main.png" alt="" width="20%" height="20%">
+        </div>
+    </div>
+
+    <!--    form content-->
+    <form action="/articles" method="post">
+        <div class="form-group">
+            <label>Title: </label>
+            <input class="form-control" type="text" name="title" placeholder="Enter article title"><br>
+        </div>
+        <div class="form-group">
+            <label>Featured image: </label>
+            <input class="form-control" type="url" name="image" placeholder="Enter image url"><br>
+        </div>
+        <div class="form-group">
+            <label>Category: </label>
+            <select style="margin-bottom: 30px" class="form-control" name="category" id="category" required>
+                <option value="" disabled selected>Select category</option>
+                <% categories.forEach(function (category) { %>
+                    <option value="<%= category.name %>"><%= category.name %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Short description: </label>
+            <input class="form-control" type="text" name="shortDescription" placeholder="Enter a short description"><br>
+        </div>
+        <div class="form-group">
+            <label>Full description: </label>
+            <textarea style="resize: vertical; min-height: 300px" class="form-control" name="description"
+                      placeholder="Enter full description. (You can use HTML elements to stylize you article.)"></textarea>
+        </div>
+        <div class="form-group">
+            <button style="width: 30%; margin: auto" class="btn btn-lg btn-block btn-primary" type="submit">Submit
+            </button>
+        </div>
+    </form>
+    <a href="/articles">Go back</a>
+</div>
+
+<%- include("../partials/footer.ejs") %>

@@ -1,0 +1,86 @@
+<%- include("../partials/header.ejs") %>
+
+<!--top pane-->
+<header id="head-pane" class="jumbotron">
+    <div class="container">
+        <!--        section 1-->
+        <div class="col-md-6 float-left">
+            <h1><%= page %></h1>
+            <p id="tagline"><em>A programmer friendly portal</em></p>
+            <p><a id="button-article" class="btn btn-primary btn-lg" href="/articles/new">Add new article</a></p>
+
+            <!--        search bar-->
+            <p>
+            <form class="form-inline" action="/articles" method="get">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="search"
+                           placeholder="Search any title ie. Hashmaps in JAVA" required style="width: 300px">
+                    <!--                    search button-->
+                    <input id="button-search" class="btn btn-default" type="submit" value="Search">
+                </div>
+            </form>
+            </p>
+        </div>
+        <!--        section 2-->
+        <div class="col-md-6 float-right">
+            <img id="logo-image" src="/images/logo_main.png" alt="" width="100%" height="100%" style="margin-top: 20px">
+        </div>
+    </div>
+</header>
+
+<!--    creating grid of articles-->
+<div class="row" style="display: flex; flex-wrap: wrap;">
+
+    <!--    if there are no articles. show message-->
+    <div class="container">
+        <% if(articles.length <= 0){ %>
+            <div class="col-md-12">
+                <h2>No articles found</h2>
+            </div>
+        <% } else{ %>
+            <!--            create articles one by one-->
+            <% articles.forEach(function (article) { %>
+                <div class="well" id="article-card">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <!--                            image-->
+                            <div class="img-container" style="width: 250px; height: 141px;">
+                                <img class="media-object" src="<%= article["image"] %>"
+                                     style="width: 100%; height: 100%">
+                            </div>
+                        </a>
+                        <div class="media-body" style="padding-left: 20px; padding-right: 20px">
+                            <!--                            title-->
+                            <h3 style="display: inline" class="media-heading"><a
+                                        href="/articles/<%= article["_id"] %>"><%= article["title"] %></a></h3>
+                            <!--                            author-->
+                            <p class="text-right"><em>Created by:</em> <a
+                                        href="/users/<%= article["author"].id %>"><%= article["author"].username %></a>
+                            </p>
+                            <!--                            short description-->
+                            <p id="shortDescription"><%= article["shortDescription"].substring(0, 200) %>.....</p>
+                            <!--                            icons-->
+                            <ul class="list-inline list-unstyled" style="margin-top: 20px">
+                                <li>
+                                    <span><i class="glyphicon glyphicon-calendar"></i> <%= moment(article.createdAt).fromNow() %></span>
+                                </li>
+                                <li>|</li>
+                                <li><span><i class="glyphicon glyphicon-comment"></i> <%= article["comments"].length %></span>
+                                </li>
+                                <li>|</li>
+                                <li><span><i class="glyphicon glyphicon-eye-open"></i> <%= article["views"] %></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--                        read more button-->
+                        <p>
+                            <a style="float: right;" href="/articles/<%= article["_id"] %>" class="btn btn-primary">Read
+                                More</a>
+                        </p>
+                    </div>
+                </div>
+        <% }); } %>
+    </div>
+</div>
+
+<%- include("../partials/footer.ejs") %>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Chapel</title>
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/stylesheets/landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Righteous&display=swap"
+          rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"
+            async></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="top-menu">
+        <span id="app_name">CodeChapel</span>
+        <a id="button-home" href="/articles">Home Page</a>
+        <a id="button-home" href="/about">About Us</a>
+
+        <% if(!currentUser){ %>
+            <a id="button-login" href="/users/login" style="margin-left: 20px">Login</a>
+            <a id="button-signup" href="/users/new">Sign Up</a>
+        <% } else { %>
+            <a id="button-logout" href="/users/logout">Logout</a>
+            <span id="user-link">Signed in as: <a
+                        href="/users/<%= currentUser._id %>"><%= currentUser.username %></a></span>
+        <% } %>
+    </div>
+
+    <div class="main">
+        <img src="/images/logo_main.png">
+
+        <form action="/articles" method="get">
+            <div class="form-group">
+                <input class="form-control-1" type="text" name="search"
+                       placeholder="Search for anything ie. Polymorphism in C++">
+                <input id="button-search" class="form-control-2" type="submit" value="Search">
+            </div>
+        </form>
+    </div>
+
+    <div class="bottom-menu">
+        <p id="dev-name">Dev: Taymoor Ghazanfar</p>
+        <p id="bottom-message">&copy; 2020 codechapel.com, All rights reserved</p>
+    </div>
+</div>

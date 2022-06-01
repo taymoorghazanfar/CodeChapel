@@ -1,0 +1,67 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="well" id="user-card" style="width: 70%; margin: auto; margin-bottom: 20px">
+    <!--    top pane-->
+    <div class="jumbotron" style="padding: 5px">
+        <div class="container" style="text-align: center">
+
+            <!--            full name-->
+            <h2>
+                <%= user["fullName"] %>
+            </h2>
+
+            <!--            avatar-->
+            <img src="<%= user.avatar %>">
+        </div>
+    </div>
+
+    <!--    profile detail card-->
+    <div class="well" style="text-align: center">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead">Profile details</p>
+                <div class="well">
+                    <h4>Username: <br><span><%= user.username %></span></h4><br>
+                    <h4>Email: <br><span><a style="display: inline"
+                                            href="mailto:<%= user.email %>"><%= user.email %></a></span></h4><br>
+                    <h4>Phone: <br><span><%= user.phone %></span></h4>
+                </div>
+
+                <!--                profile settings card (only visible if user is eligible)-->
+                <% if(currentUser && user._id.equals(currentUser._id)){ %>
+                    <p class="lead">Profile settings</p>
+                    <div class="well">
+                        <a class="btn btn-success btn-block" href="/users/<%= user._id %>/edit">Edit profile</a>
+                        <a class="btn btn-warning btn-block" href="/request-reset">Change password</a>
+
+                        <form id="delete_form" action="/users/<%= user._id %>?_method=DELETE"
+                              method="post"
+                              onsubmit="return confirm('Delete profile for sure ?');">
+                            <button style="margin-top: 5px" class="btn btn-danger btn-block">Delete Profile</button>
+                        </form>
+                    </div>
+                <% } %>
+
+                <!--                posts created card-->
+            </div>
+            <div class="col-md-6">
+                <p class="lead">Posts created</p>
+                <div class="well">
+                    <% if(articles.length <= 0){ %>
+                        <h4>Nothing to show</h4>
+                    <% }else{ %>
+                    <ul>
+                        <% articles.forEach(function (article) { %>
+                            <li>
+                                <a href="/articles/<%= article._id %>"><%= article.title %></a>
+                            </li>
+                        <% });} %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:history.back()">Go Back</a>
+    </div>
+</div>
+
+<%- include("../partials/footer.ejs") %>

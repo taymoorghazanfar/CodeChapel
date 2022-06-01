@@ -1,0 +1,453 @@
+/*to make images take full width of frame*/
+.thumbnail img {
+
+    width: 100%;
+}
+
+/*to remove extra padding from all cards(thumbnails)*/
+.thumbnail {
+
+    padding: 0;
+}
+
+/*add padding to articles descriptions div*/
+.thumbnail .caption-full {
+
+    padding: 10px;
+}
+
+#post_options {
+
+    padding: 10px;
+    margin: 10px;
+}
+
+#delete_form {
+
+    display: inline;
+}
+
+#main-nav {
+
+    height: 80px;
+    background-color: #b0a98b;
+    border-radius: 0;
+    margin-top: 0;
+    outline: none;
+    border: none;
+}
+
+#main-nav a {
+
+    height: 80px;
+    line-height: 40px;
+
+    font-family: Poppins, serif;
+    font-size: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    transition: background-color 1s;
+}
+
+.clicked {
+
+    background-color: black;
+}
+
+#main-nav a:hover {
+
+    background-color: #5d5947;
+}
+
+#username {
+
+    font-family: 'Orbitron', cursive;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+#site-name {
+
+    font-family: 'Orbitron', cursive;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+}
+
+#tagline {
+
+    font-family: 'Poppins', cursive;
+    text-decoration: none;
+    color: black;
+}
+
+#button-article {
+
+    background-color: dodgerblue;
+}
+
+#button-article:hover {
+
+    background-color: #0c519b;
+    transition: background-color 1s;
+}
+
+#head-pane {
+
+    background-size: cover;
+    height: 100%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    /*box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);*/
+    background: #C6FFDD; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C6FFDD, #FBD786, #f7797d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C6FFDD, #FBD786, #f7797d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#button-search {
+
+    background-color: mediumseagreen;
+    color: white;
+    transition: background-color 1s;
+}
+
+#button-search:hover {
+
+    background-color: darkolivegreen;
+}
+
+#logo-image {
+
+    transition: transform 2s;
+}
+
+#logo-image:hover {
+
+    transform: scale(1.1);
+}
+
+/*article item on index page*/
+#article-card {
+
+    background-color: #f3efda;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 1s;
+    font-family: 'Poppins', cursive;
+}
+
+
+#article-card:hover {
+
+    background-color: #dbd5bd;
+}
+
+#article-card img {
+
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#article-card h3, #article-card h3 a {
+
+    font-weight: bold;
+    color: black;
+    transition: color 0.5s;
+}
+
+#article-card h3 a:hover {
+
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+#article-card .text-right a {
+
+    font-family: 'Orbitron', cursive;
+    text-decoration: none;
+    color: dodgerblue;
+    font-weight: bolder;
+}
+
+#article-card .btn {
+
+    background-color: coral;
+    outline: 0;
+    transition: background-color 0.5s;
+}
+
+#article-card .btn:hover {
+
+    background-color: #b55b35;
+    outline: 0;
+}
+
+#article-card ul {
+
+    color: #6d6d6d;
+}
+
+#shortDescription {
+
+    color: black;
+    word-break: break-word;
+}
+
+/*footer*/
+
+.footer p {
+
+    margin-bottom: 0;
+}
+
+/*login page*/
+
+#login-card, #register-card, #request-card, #user-card, #user-card {
+
+    background-color: #f3efda;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+#user-card .well {
+
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#login-card .jumbotron, #register-card .jumbotron, #request-card .jumbotron, #user-card .jumbotron {
+
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    background: #C6FFDD; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C6FFDD, #FBD786, #f7797d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C6FFDD, #FBD786, #f7797d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#login-card button, #register-card button, #request-card button {
+
+    background-color: coral;
+    transition: background-color 0.5s;
+}
+
+#login-card button:hover, #register-card button:hover, #request-card button:hover {
+
+    background-color: #b55b35;
+    outline: 0;
+}
+
+#login-card a, #register-card a, #request-card a {
+
+    color: dodgerblue;
+}
+
+#login-card .container, #register-card .container, #request-card .container {
+
+    text-align: center;
+    display: flex;
+    justify-content: center
+}
+
+#login-card .container h1, #register-card .container h1, #request-card .container h2 {
+
+    display: inline;
+    margin-right: 10px
+}
+
+#user-card h2 {
+
+    display: inline;
+    padding: 20px;
+    margin-top: 80px;
+    font-family: 'Orbitron', cursive;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+#user-card {
+
+    font-family: 'Poppins', cursive;
+}
+
+#user-card img {
+
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 2s;
+}
+
+#user-card img:hover {
+
+    transform: scale(0.8);
+}
+
+#user-card p {
+
+    background-color: dodgerblue;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    /*box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);*/
+}
+
+#user-card h4 span {
+
+    font-weight: bolder;
+}
+
+#user-card ul {
+
+    line-height: 30px;
+    text-align: left;
+}
+
+#user-card a {
+
+    display: block;
+    font-size: 16px;
+
+}
+
+#user-edit {
+
+    font-family: 'Orbitron', cursive;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+/*article show page*/
+#card-show-article {
+
+    background-color: #f3efda;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', cursive;
+}
+
+#card-show-article img {
+
+    border-radius: 5px;
+    width: 100%;
+}
+
+#card-show-article h1 a {
+
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#created-by {
+    font-size: 16px;
+}
+
+#created-by a {
+
+    font-family: 'Orbitron', cursive;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+#created-by span {
+
+    color: coral;
+    float: right;
+    font-weight: bold;
+}
+
+#article-desc-card {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#article-short-desc-card {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#card-options {
+
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    background: #C6FFDD; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C6FFDD, #FBD786, #f7797d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C6FFDD, #FBD786, #f7797d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center
+}
+
+#card-options .btn {
+
+    width: 150px;
+}
+
+#card-comments {
+
+    background-color: #f3efda;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', cursive;
+}
+
+#card-comments .well:nth-child(1) {
+
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    background: #C6FFDD; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C6FFDD, #FBD786, #f7797d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C6FFDD, #FBD786, #f7797d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#single-comment {
+
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', cursive;
+}
+
+#single-comment a:nth-child(1) {
+
+    font-family: 'Orbitron', cursive;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+#single-comment span {
+
+    color: coral;
+    float: right;
+    font-weight: bold;
+}
+
+#single-comment p {
+
+    font-size: 20px;
+}
+
+/*sidebar*/
+#card-more {
+
+    background-color: #f3efda;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', cursive;
+}
+
+#card-more .well {
+
+    background-color: coral;
+    color: white;
+}
+
+#card-more a {
+
+    color: dodgerblue;
+    font-size: 16px;
+}
+
+#card-more li {
+
+    padding: 5px;
+}

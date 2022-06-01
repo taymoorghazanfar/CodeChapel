@@ -1,0 +1,48 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="well" id="register-card">
+    <!--    top pane-->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Register</h1>
+            <img id="logo-image" src="/images/logo_main.png" alt="" width="20%" height="20%">
+        </div>
+    </div>
+    <!--    form content-->
+    <div style="width: 30%; margin: 25px auto;">
+        <form action="/users/new" method="post">
+            <div class="form-group">
+                <label>Full name: </label>
+                <input class="form-control" type="text" name="fullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label>Phone number: </label>
+                <input class="form-control" type="number" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label>Email: </label>
+                <input class="form-control" type="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label>Avatar URL: </label>
+                <input class="form-control" type="url" name="avatar" placeholder="Enter avatar URL">
+            </div>
+            <div class="form-group">
+                <label>Username: </label>
+                <input class="form-control" type="text" name="username"
+                       placeholder="Enter a username. Min. 6 characters" required>
+            </div>
+            <div class="form-group">
+                <label>Password: </label>
+                <input class="form-control" type="password" name="password"
+                       placeholder="Enter a password. Min. 6 characters" required>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Sign Up</button>
+            </div>
+        </form>
+        <a href="/">Go Back</a>
+    </div>
+</div>
+
+<%- include("../partials/footer.ejs") %>
